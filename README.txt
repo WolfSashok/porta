@@ -23,7 +23,7 @@ But do not program in COBOL if you can avoid it.
 
 Project DIR
 
-/etc - applications config files
+/etc - nginx, php ... config files
 /images - Dockers files
 /logs - there are log files (nginx ...)
 /www - there is working directory with scripts.
