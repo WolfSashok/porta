@@ -17,3 +17,15 @@ But do not program in COBOL if you can avoid it.
         -- Geoffrey James, "The Tao of Programming"
 
 то повинна повернути вона символ "m".
+
+
+===============================================================================================
+
+Project DIR
+
+/etc - applications config files
+/images - Dockers files
+/logs - there are log files (nginx ...)
+/www - there is working directory with scripts.
+
+==============================================================================================
