@@ -29,7 +29,7 @@ IFS=' ' read -r -a array <<< $text
         done
     done
 
-#echo "${UnicTextSymbols[@]}"
+# Find the first uniq symbol and print the result.
 
     for i in ${UnicTextSymbols[@]}; do
         if [ `echo ${UnicTextSymbols[@]} | grep -o $i | wc -l` -eq 1 ]; then
@@ -38,13 +38,6 @@ IFS=' ' read -r -a array <<< $text
         fi
     done
 
-#echo "${UnicTextSymbols[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '
-#UnicTextSymbols=($(echo "${UnicTextSymbols[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
-
-#printf "%s\n" "${UnicTextSymbols[0]}"
-
-#Find the 
-
 else 
-    echo "Usage \"You text format\" for input data"
+    echo "Usage \"Your text format\" for input data"
 fi
