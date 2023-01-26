@@ -3,7 +3,7 @@ if(isset($_POST["text"]) && isset($_POST["language"]))
 {
     $text = htmlentities($_POST["text"]);
     $text = str_replace("\n", "", $text);
-;
+
 //echo $text;
 
     $result = shell_exec("bash algoritm.sh '".$text."'");
