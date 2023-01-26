@@ -15,9 +15,10 @@
     maxlength="500">
 </textarea></p>
 
-<p>Select algoritm language: <br><br>
-<select name="language[]" size="4" multiple="multiple">
-    <option selected value="PHP">PHP</option>
+<p>Select algorithm language: <br><br>
+<select name="language[]" size="5" multiple="multiple">
+    <option selected value="BASH">BASH</option>
+    <option value="PHP">PHP</option>
     <option value="Ruby">RUBY</option>
     <option value="Python">Python</option>
     <option value="Java">Java</option>

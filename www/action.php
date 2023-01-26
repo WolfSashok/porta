@@ -30,6 +30,8 @@ if(isset($_POST["text"]) && isset($_POST["language"]))
 }
 else
 {   
-    echo "Введенные данные некорректны";
+    echo "Введенные данные некорректны<br>";
 }
+
+    echo "<center><br><a href=\"http://34.116.191.145/\">BACK</a>"
 ?>
