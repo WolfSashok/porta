@@ -7,6 +7,14 @@ if [ "$text" != "" ]; then
 #Cut the text to the words and dump it to array.
 IFS=' ' read -r -a array <<< $text
 
+echo "
+<center>OK! Let's check it:)<br>
+You have written this text:<br>
+============================================<br>
+\"$text\"<br>
+============================================<br><br>"
+
+
 #Work with array. Use every symbol in a word and grep. Write the required to tmp file
 
     for word in ${array[@]}; do
@@ -27,10 +35,20 @@ IFS=' ' read -r -a array <<< $text
 
     for i in ${UnicTextSymbols[@]}; do
         if [ `echo ${UnicTextSymbols[@]} | grep -o $i | wc -l` -eq 1 ]; then
-            echo "<center>OK! Let's check it:)<br>You have written this text:<br>============================================<br>\"$text\"<br>============================================<br><br>!!!!!!!!!CONGRATULATION!!!!!!!!!<br>The symbol is <b>\"$i\"</b>"
-            break
+            echo "
+            <font size=5 color=00FF00>!!!!!!!!!CONGRATULATION!!!!!!!!!<br><br>
+            The symbol is <b>\"$i\"</b></font><br>
+            <a href=\"http://34.116.191.145/\">BACK</a>"
+
+            exit 0
         fi
+
     done
+
+            echo "
+            <center><font size=5 color=FF0000>>O-O-O-p-s-s-s. There isn't such letter!<br>
+            Please try againg.</font><br>
+            <a href=\"http://34.116.191.145/\">BACK</a>"
 
 else 
     echo "Usage \"Your text format\" for input data"

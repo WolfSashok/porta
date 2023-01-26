@@ -17,7 +17,7 @@
 
 <p>Select algoritm language: <br><br>
 <select name="language[]" size="4" multiple="multiple">
-    <option value="PHP">PHP</option>
+    <option selected value="PHP">PHP</option>
     <option value="Ruby">RUBY</option>
     <option value="Python">Python</option>
     <option value="Java">Java</option>
