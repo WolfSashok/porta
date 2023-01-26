@@ -2,18 +2,21 @@
 if(isset($_POST["text"]) && isset($_POST["language"])) 
 {
     $text = htmlentities($_POST["text"]);
+//    $text = "\"".$text."\"";
+//echo $text;
 
-    $output ="
-    <html>
-    <head>
-    <title>Повторяем текст</title>
-    </head>
-    <body>
-    You wrote: $text<br />
-    <ul>";
+    $result = shell_exec("bash algoritm.sh '".$text."'");
 
-    $result = shell_exec('bash algoritm.sh \'$text\'');
-    
+//    $output ="
+//    <html>
+//    <head>
+//    <title>Повторяем текст</title>
+//    </head>
+//    <body>
+//    You wrote: $text<br />
+//    <ul>";
+
+
     echo $result;
 
 //    foreach (count_chars($text, 1) as $i => $val) {

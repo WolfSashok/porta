@@ -2,13 +2,7 @@
 
 text=$1
 
-UniqTextSymbols=()
-
 if [ "$text" != "" ]; then
-
-echo "OK! Let's check it:)"
-
-echo -e "You have writen this text:\n============================================\n\""$text"\"\n============================================\n"
 
 #Cut the text to the words and dump it to array.
 IFS=' ' read -r -a array <<< $text
@@ -33,7 +27,7 @@ IFS=' ' read -r -a array <<< $text
 
     for i in ${UnicTextSymbols[@]}; do
         if [ `echo ${UnicTextSymbols[@]} | grep -o $i | wc -l` -eq 1 ]; then
-            echo -e "Congratulation!!!!!!!!!\nThe symbol is \"$i\""
+            echo "OK! Let's check it:)<br>You have written this text:<br>============================================<br>\"$text\"<br>============================================<br>Congratulation!!!!!!!!!<br>The symbol is \"$i\""
             break
         fi
     done

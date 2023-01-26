@@ -9,10 +9,14 @@
 <form action="action.php" method="POST">
 
 <p><center>Write your text here:<br><br> 
-<textarea name="text" maxlength="500"></textarea></p>
+<textarea name="text" style="
+    width: 600px;
+    height: 300px;"
+    maxlength="500">
+</textarea></p>
 
 <p>Select algoritm language: <br><br>
-<select name="language[]" size="5" multiple="multiple">
+<select name="language[]" size="4" multiple="multiple">
     <option value="PHP">PHP</option>
     <option value="Ruby">RUBY</option>
     <option value="Python">Python</option>
