@@ -27,7 +27,7 @@ IFS=' ' read -r -a array <<< $text
 
     for i in ${UnicTextSymbols[@]}; do
         if [ `echo ${UnicTextSymbols[@]} | grep -o $i | wc -l` -eq 1 ]; then
-            echo "OK! Let's check it:)<br>You have written this text:<br>============================================<br>\"$text\"<br>============================================<br>Congratulation!!!!!!!!!<br>The symbol is \"$i\""
+            echo "<center>OK! Let's check it:)<br>You have written this text:<br>============================================<br>\"$text\"<br>============================================<br><br>!!!!!!!!!CONGRATULATION!!!!!!!!!<br>The symbol is <b>\"$i\"</b>"
             break
         fi
     done
