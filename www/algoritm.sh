@@ -44,7 +44,7 @@ IFS=' ' read -r -a array <<< $text
     done
 
     echo "
-    <center><font size=5 color=FF0000>>O-O-O-p-s-s-s. There isn't such letter!<br>
+    <center><font size=5 color=FF0000>O-O-O-p-s-s-s. There isn't such letter!<br>
     Please try againg.</font><br>"
 
 else 
