@@ -31,3 +31,6 @@ algoritm.sh - bash script to solve the algorithm
 
 ==============================================================================================
 
+sources:
+
+Sypex Geo https://sypexgeo.net/ - GeoIP
