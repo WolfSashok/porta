@@ -1,34 +1,42 @@
 <?php
 
 //Funct - Get users IP address
-function getUserIpAddr() {
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else {
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
-        return $ip;
-    }
+include 'functions.php';
+
+//Get users IP address
 $ip = getUserIpAddr();
 
 //Geo IP
-require_once 'SxGeo.php';
-$SxGeo = new SxGeo('SxGeoCity.dat', SXGEO_BATCH | SXGEO_MEMORY);
-$city = $SxGeo->getCityFull($ip);
-$country_code = $city['country']['iso'];
-$city_name_en = $city['city']['name_en'];
-$lat = $city['city']['lat'];
-$lon = $city['city']['lon'];
+$geo = getGeoIpInfo($ip);
 
-//Work with a text. Exec bash script with algorithm
+//Work with a text. Exec scripts with algorithm
 if(isset($_POST["text"]) && isset($_POST["language"])) 
 {
-    $text = htmlentities($_POST["text"]);
-    $text = str_replace("\n", "", $text);
+    $text = str_replace("\n", "", (htmlentities($_POST["text"]))); //replace character wraps
+    $language = htmlentities($_POST["language"]);
 
-    $result = shell_exec("bash algoritm.sh '".$text."'");
+echo "<center>You choosed ".$language."<br><br>";
+
+//switch languages
+switch ($language) {
+    case 'BASH':
+        $result = shell_exec("bash algoritm.sh '".$text."'");
+        break;
+    case 'PHP':
+        echo "<center>Sorry. ".$language." will be available soon. Try other languages.";
+        break;
+    case 'Python':
+        echo "<center>Sorry. ".$language." will be available soon. Try other languages.";
+        break;
+    case 'Java':
+        echo "<center>Sorry. ".$language." will be available soon. Try other languages.";
+        break;
+    case 'Ruby':
+        echo "<center>Sorry. ".$language." will be available soon. Try other languages.";
+        break;
+    default:
+        echo "<center>O-o-o-p-s. Choose language.";
+}
 
     echo $result;
 
@@ -39,8 +47,8 @@ else
 }
 
     echo "<center><br>Your ip address is \"".$ip."\"";
-    echo "<center><br>You are from \"".$country_code.": ".$city_name_en."\"";
-    if ($country_code == "UA") echo "<br><br>СЛАВА УКРАЇНІ!!!<br>";
+    echo "<center><br>You are from \"".$geo['country'].": ".$geo['city']."\"";
+    if ($geo['country'] == "UA") echo "<br><br>СЛАВА УКРАЇНІ!!!<br>";
     echo "<center><br><a href=\"http://34.116.191.145/\">BACK</a>";
     
 ?>
