@@ -38,8 +38,8 @@ function getUniqSymbol($text) {
                 $symbols[] = $word[$i];
                 break;
             }
-            $i++; 
-        } 
+            $i++;
+        }
     }
 
     if (!empty($symbols)) {
@@ -47,6 +47,7 @@ function getUniqSymbol($text) {
              if (count(array_keys($symbols, $symbol)) == 1) { // If the symbol is uniq, break.
                 break;
             }
+        unset($symbol);
         }
     }
 
