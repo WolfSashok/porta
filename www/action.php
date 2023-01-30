@@ -51,7 +51,7 @@ goto end;
     }
 
     if (empty($result)) {
-        echo "<center><font size=5 color=FF0000>O-O-O-p-s-s-s. There isn't such letter!<br>
+        echo "<center><font size=5 color=FF0000>O-O-O-p-s-s-s. There isn't such uniq symbol!<br>
         Please try againg.</font><br>";
     }
     else
