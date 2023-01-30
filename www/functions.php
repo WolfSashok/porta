@@ -26,8 +26,32 @@ function getGeoIpInfo($ip) {
 
 
 //Get uniq symbol
-function getUniqSymbol() {
+function getUniqSymbol($text) {
 
+    $text = explode(" ", $text);                          // Cut the text into words and dump it into array.
+
+    foreach ($text as $word){                             // Work with text array, use every word and make changes.
+        $long = strlen($word);                            // Count symbols in word.
+        $i = 0;
+        while ($i < $long) {                              // Find the first uniq symbol.
+            if (substr_count($word, $word[$i]) == 1) {    // If symbol is uniq, write symbol to 'symbols' and break while.
+                $symbols[] = $word[$i];
+                break;
+            }
+            $i++; 
+        } 
+    }
+
+    if (!empty($symbols)) {
+        foreach ($symbols as $symbol){                        // Work with symbols
+             if (count(array_keys($symbols, $symbol)) == 1) { // If the symbol is uniq, break.
+                break;
+            }
+        }
+    }
+
+return $symbol;
 }
+
 
 ?>
