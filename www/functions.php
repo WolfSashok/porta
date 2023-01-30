@@ -44,10 +44,10 @@ function getUniqSymbol($text) {
 
     if (!empty($symbols)) {
         foreach ($symbols as $symbol){                        // Work with symbols
-             if (count(array_keys($symbols, $symbol)) == 1) { // If the symbol is uniq, break.
+            if (count(array_keys($symbols, $symbol)) == 1) { // If the symbol is uniq, break.
                 break;
             }
-        unset($symbol);
+            unset($symbol);
         }
     }
 
