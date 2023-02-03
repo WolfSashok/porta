@@ -71,6 +71,6 @@ end:
     echo "<center><br><br>============================================<br>Your ip address is \"".$ip."\"";
     echo "<center><br>You are from \"".$geo['country'].": ".$geo['city']."\"";
     if ($geo['country'] == "UA") echo "<br><br>СЛАВА УКРАЇНІ!!!<br>";
-    echo "<center><br><a href=\"http://34.116.191.145/\">BACK</a>";
+    echo "<center><br><a href=\"http://34.118.32.155/\">BACK</a>";
 
 ?>

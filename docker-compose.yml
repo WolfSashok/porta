@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
     nginx:
@@ -11,8 +11,17 @@ services:
             - ./logs/nginx:/var/log/nginx
         links:
             - php
+            - django
 
     php:
         build: ./images/php
         volumes:
             - ./www:/var/www
+
+    django:
+        build: ./images/django-docker
+        volumes:
+            - ./images/django-docker:/app
+        command: python manage.py runserver 0.0.0.0:8000
+        ports:
+            - "8000:8000"
