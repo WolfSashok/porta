@@ -41,3 +41,4 @@ algoritm.sh - bash script to solve the algorithm
 Sources:
 
 Sypex Geo https://sypexgeo.net/ - GeoIP
+Django-Docker https://gitlab.com/PythonRu/django-docker.git

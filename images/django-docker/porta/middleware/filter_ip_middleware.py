@@ -7,7 +7,7 @@ class FilterIPMiddleware:
 
     def __call__(self, request):
 
-        allowed_ips = []
+        allowed_ips = ['172.18.0.1']
         ip = request.META.get('REMOTE_ADDR')
         if ip not in allowed_ips:
             raise PermissionDenied
