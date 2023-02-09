@@ -55,4 +55,34 @@ return $symbol;
 }
 
 
+// Python request to Django
+function getPythonAlg($text) {
+
+    $text = explode(" ", $text);                          // Cut the text into words and dump it into array.
+/*    $headers = stream_context_create(                     // create POST request
+    array(
+        'http' => array(
+            'method'  => 'POST',
+            'header'  => 'Content-Type: application/x-www-form-urlencoded',
+            'content' => http_build_query($text),
+            )
+        )
+    );
+    $symbol = file_get_contents("http://172.18.0.1:8000/porta/alg", false, $headers);
+*/
+
+    $myCurl = curl_init();
+    curl_setopt_array($myCurl, array(
+        CURLOPT_URL => 'http://172.18.0.1:8000/porta/alg',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => http_build_query($text)
+    ));
+    $symbol = curl_exec($myCurl);
+    curl_close($myCurl);
+
+return $symbol;
+}
+
+
 ?>

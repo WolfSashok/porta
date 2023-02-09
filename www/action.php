@@ -38,7 +38,7 @@ goto end;
             $result = getUniqSymbol($text);                       // Use php function.
             break;
         case 'Python':
-            echo "<center>Sorry. ".$language." will be available soon. Try other languages.";
+            $result = getPythonAlg($text);
             break;
         case 'Java':
             echo "<center>Sorry. ".$language." will be available soon. Try other languages.";
