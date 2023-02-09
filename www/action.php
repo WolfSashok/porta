@@ -14,7 +14,7 @@ if(isset($_POST["text"]) && isset($_POST["language"])) {
     $text = str_replace("\n", " ", (htmlentities($_POST["text"]))); //replace character wraps
     $language = htmlentities($_POST["language"]);
 
-    echo "<center>You choosed ".$language."<br><br>";
+    echo "<center><font size=6>You choosed \"".$language."\"</font><br><br>";
     echo "
     <center>OK! Let's check it:)<br>
     You have written this text:<br>
