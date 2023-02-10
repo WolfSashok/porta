@@ -1,1 +1,0 @@
-./www/algoritm.sh

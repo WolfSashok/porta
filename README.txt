@@ -33,7 +33,6 @@ Project DIR
 /images/django-docker - Django project.
 /logs - there are log files (nginx ...)
 /www - there is working directory with scripts.
-algoritm.sh - bash script to solve the algorithm
 
 
 ==============================================================================================

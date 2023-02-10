@@ -204,3 +204,4 @@
 91.225.199.1 - - [09/Feb/2023:10:53:20 +0000] "GET /porta/alg HTTP/1.1" 502 559 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 91.225.199.1 - - [09/Feb/2023:10:53:56 +0000] "GET /porta/alg HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 91.225.199.1 - - [09/Feb/2023:10:54:01 +0000] "GET /porta/ HTTP/1.1" 200 2 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+46.96.167.85 - - [09/Feb/2023:15:29:28 +0000] "GET /porta/alg HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Linux; Android 12; SM-M315F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36"
