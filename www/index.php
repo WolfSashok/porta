@@ -16,12 +16,12 @@
 </textarea></p>
 
 <p>Select algorithm language: <br><br>
-<select name="language" size="5" multiple="multiple">
+<select name="language" size="4" multiple="multiple">
     <option selected value="BASH">BASH</option>
     <option value="PHP">PHP</option>
     <option value="Python">Python</option>
     <option value="Java">Java</option>
-    <option value="Ruby">RUBY</option>
+<!--    <option value="Ruby">RUBY</option> -->
 </select></p>
 <input type="submit" value="SUBMIT">
 </form>
